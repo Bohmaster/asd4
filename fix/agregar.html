@@ -1,0 +1,44 @@
+<div class="w-container" style="padding: 20px; margin-top: 120px;">
+
+  <center><h2>Administración Comercios</h2></center>
+
+  <form name="ComercioForm">
+
+    <div class="form-group" style="padding: 15px;">
+
+      <input type="text" class="form-control focus margin" placeholder="Nombre" ng-model="comercio.nombre"/> <br/>
+      <input type="text" id="rubros" class="form-control focus margin" name="rubro" list="rubro"
+             placeholder="Seleccione rubro" autocomplete="off" required> <br/>
+      <datalist id="rubro">
+        <option ng-repeat="r in rubros" value="{{r.nombre}}" id="{{r.id}}">
+      </datalist>
+      <input type="text" class="form-control focus margin" placeholder="Dirección" ng-model="comercio.direccion"/> <br/>
+      <input type="text" class="form-control focus margin" placeholder="Aclaración" ng-model="comercio.metaDireccion"/> <br/>
+      <input type="text" class="form-control focus margin" placeholder="Localidad" ng-model="comercio.localidad"/> <br/>
+      <input type="text" class="form-control focus margin" placeholder="Télefono" ng-model="comercio.telefono"/> <br/>
+      <input type="text" class="form-control focus margin" placeholder="Horarios" ng-model="comercio.horarios"/> <br/>
+      <input type="text" class="form-control focus margin" placeholder="Pagina" ng-model="comercio.pagina"/> <br/>
+      <input type="text" class="form-control focus margin" placeholder="Fanpage" ng-model="comercio.fanPage"/> <br/>
+      <input type="text" class="form-control focus margin" placeholder="Email" ng-model="comercio.email"/> <br/>
+      <textarea cols="30" class="form-control focus margin"  ui-tinymce="tinyMCEOptions" placeholder="Descripción" rows="10" ng-model="comercio.descripcion"></textarea> <br/>
+      <textarea cols="30" class="form-control focus margin" ui-tinymce="tinyMCEOptions" placeholder="Promoción" rows="10" ng-model="comercio.promocion"></textarea> <br/>
+      Portada<input type="file" file-input="file" /> <br/>
+      Slider<input type="file" files-input="files" multiple/> <br/>
+
+    </div>
+
+    <button class="btn btn-default" style="width: 100%; background: darkgrey;" ng-click="agregarComercio()">Agregar</button>
+
+  </form>
+
+</div>
+
+<div class="container-fluid" style="background: darkgrey; height: 300px;">
+
+  <div class="container">
+
+    Lista
+
+  </div>
+
+</div>

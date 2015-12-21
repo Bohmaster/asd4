@@ -1,0 +1,29 @@
+{
+  "name": "Clasificado",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "properties": {
+    "titulo": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "string"
+    },
+    "compraVenta": {
+      "type": "boolean"
+    },
+    "imagenes": {
+      "type": [
+        "string"
+      ]
+    },
+    "pago": {
+      "type": "boolean"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

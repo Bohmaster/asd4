@@ -1,0 +1,65 @@
+{
+  "name": "Comercio",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "properties": {
+    "nombre": {
+      "type": "string"
+    },
+    "direccion": {
+      "type": "string"
+    },
+    "telefono": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "descripcion": {
+      "type": "string"
+    },
+    "promocion": {
+      "type": "string"
+    },
+    "imagenComercio": {
+      "type": "string"
+    },
+    "imagenes": {
+      "type": [
+        "string"
+      ]
+    },
+    "horarios": {
+      "type": "string"
+    },
+    "pagina": {
+      "type": "string"
+    },
+    "direccionMapa": {
+      "type": "string"
+    },
+    "rubro": {
+      "type": "string"
+    },
+    "_descripcion": {
+      "type": "string"
+    },
+    "_promocion": {
+      "type": "string"
+    },
+    "metaDireccion": {
+      "type": "string"
+    },
+    "localidad": {
+      "type": "string"
+    },
+    "fanPage": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

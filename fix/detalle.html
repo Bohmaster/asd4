@@ -1,0 +1,54 @@
+<div class="w-section secinfo" style="background: white !important;">
+  <h1>{{ comercio.nombre }}</h1> <center><span ng-click="editarComercio(comercio.id)">Editar</span><span>Eliminar</span></center>
+  <h3 style="color: #f0a748;">{{ rubro.nombre }}</h3>
+  <div class="w-container">
+    <div ng-repeat="img in comercio.imagenes track by $index" style="text-align: center; margin-bottom: 50px;">
+
+      <img src="storage/images/{{ img }}" height="400" alt=""/>
+
+    </div>
+
+    <div style="padding: 50px; background: #ec144f; width: 100%;">
+      <p compile="{{ comercio.descripcion }}"></p>
+    </div>
+
+    <div class="w-row rowdatos" style="padding: 30px;">
+      <div class="w-col w-col-6">
+        <div class="direccionmasinfo"><div class="h3">Direccion:</div> {{ comercio.direccion }}</div>
+        <div class="telmasinfo"> <div class="h3">Horarios:</div>{{ comercio.horarios }}</div>
+        <div class="telmasinfo"> <div class="h3">Teléfono:</div> {{ comercio.telefono }}</div>
+      </div>
+      <div class="w-col w-col-6">
+        <div class="telmasinfo"> <div class="h3">Email:</div> {{ comercio.email }}</a></div>
+        <div class="telmasinfo"> <div class="h3">Pagina Web:</div> {{ comercio.pagina }}</div>
+        <div class="telmasinfo"> <div class="h3">Fan Page:</div> <a href="{{comercio.fanPage}}">{{comercio.nombre}}</a></div>
+      </div>
+    </div>
+
+    <div style="padding: 50px; background: #ec144f;">
+
+      <p compile="{{ comercio.promocion }}"></p>
+
+    </div>
+
+
+    <div class="w-row" style="margin-top: 30px;">
+      <div class="w-col w-col-6">
+        <mapa dir="{{ comercio.direccion }}"></mapa>
+      </div>
+      <div class="w-col w-col-6 webmasinfo">
+        <div class="w-form">
+          <form class="form" id="email-form" name="email-form" data-name="Email Form">
+            <div class="envienos">Envíenos su consulta y a la brevedad le responderemos.</div>
+            <input class="w-input" id="name" type="text" placeholder="Nombre" name="name" data-name="Name" ng-model="visitante.nombre">
+            <input class="w-input" id="email" type="email" placeholder="Email" name="email" data-name="Email" required="required" ng-model="visitante.email">
+            <textarea class="w-input" id="field" placeholder="Consulta" name="field" ng-model="visitante.query"></textarea>
+
+          </form>
+
+          <button ng-click="enviarEmail()">Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
